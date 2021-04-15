@@ -22,7 +22,19 @@ export class HomePageComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form.value)
+    if(this.form.valid) {
+      console.log(this.form.value)
+    } else {
+      this.checkError();
+      console.log('abrir modal')
+    }
+  }
+
+  checkError() {
+    Object.keys(this.form.controls).forEach(field => {
+      const control = this.form.get(field);
+      control.markAsTouched();
+    })
   }
 
 }

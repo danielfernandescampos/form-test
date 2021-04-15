@@ -1,43 +1,63 @@
 <h3>Contact Form</h3>
 
-<div  class="container" >
+<div class="form" >
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <label for="fname">First Name</label>
-    <input 
-        type="text" 
-        id="fname" 
-        name="firstname" 
-        placeholder="Your name.."
-        formControlName="firstName"
-        >
+    <div class="form__field">
+        <label for="fname">First Name</label>
+        <input 
+            type="text" 
+            id="fname" 
+            name="firstname" 
+            placeholder="Your name.."
+            formControlName="firstName"
+            >
+        <div class="error-msg" *ngIf="!form.get('firstName').valid && form.get('firstName').touched" >
+            Por favor, informe o seu nome.
+        </div>
+    </div>
 
-    <label for="lname">Last Name</label>
-    <input 
-        type="text" 
-        id="lname" 
-        name="lastname" 
-        placeholder="Your last name.."
-        formControlName="lastName"
-        >
+    <div class="form__field">
+        <label for="lname">Last Name</label>
+        <input 
+            type="text" 
+            id="lname" 
+            name="lastname" 
+            placeholder="Your last name.."
+            formControlName="lastName"
+            >
+        <div class="error-msg" *ngIf="!form.get('lastName').valid && form.get('lastName').touched" >
+            Por favor, informe o seu sobrenome.
+        </div>
+    </div>
 
-    <label for="country">Country</label>
-    <input 
-        type="text" 
-        id="country" 
-        name="country" 
-        placeholder="Your country.."
-        formControlName="country"
-        >
+    <div class="form__field">
+        <label for="country">Country</label>
+        <input 
+            type="text" 
+            id="country" 
+            name="country" 
+            placeholder="Your country.."
+            formControlName="country"
+            >
+        <div class="error-msg" *ngIf="!form.get('country').valid && form.get('country').touched" >
+            Por favor, informe o seu país.
+        </div>
+    </div>
 
-    <label for="subject">Subject</label>
-    <textarea 
-        id="subject" 
-        name="subject" 
-        placeholder="Write something.." 
-        style="height:200px"
-        formControlName="subject"
-        >
-    </textarea>
+    <div class="form__field">
+        <label for="subject">Subject</label>
+        <textarea 
+            id="subject" 
+            name="subject" 
+            placeholder="Write something.." 
+            style="height:200px"
+            formControlName="subject"
+            >
+        </textarea>
+    <div class="error-msg" *ngIf="!form.get('subject').valid && form.get('subject').touched" >
+        Por favor, informe o assunto.
+    </div>
+    </div>
 
     <input type="submit" value="Submit">
     <!--routerLink="/submit"-->

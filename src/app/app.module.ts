@@ -1,3 +1,4 @@
+import { HttpService } from './core/http/http.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,19 +8,21 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SubmitPageComponent } from './submit-page/submit-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    SubmitPageComponent
+    SubmitPageComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

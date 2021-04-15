@@ -14,44 +14,9 @@
     <th style="width:20%;">Country</th>
     <th style="width:50%;">Subject</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Germany</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbkop</td>
-    <td>Sweden</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>UK</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Koniglich Essen</td>
-    <td>Germany</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Canada</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Italy</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>UK</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Paris specialites</td>
-    <td>France</td>
-    <td></td>
+  <tr *ngFor="let contact of contacts" >
+    <td>{{ contact.firstName }} {{ contact.lastName }}</td>
+    <td>{{ contact.country }}</td>
+    <td>{{ contact.subject }}</td>
   </tr>
 </table>

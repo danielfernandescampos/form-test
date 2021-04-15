@@ -1,3 +1,5 @@
+import { Contact } from './../core/http/contact';
+import { HttpService } from './../core/http/http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubmitPageComponent implements OnInit {
 
-  constructor() { }
+  contacts: Contact[]
+
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
+    this.httpService.listContacts()
+    .subscribe(data => {
+      this.contacts = data; 
+    })
   }
 
   onSearch() {

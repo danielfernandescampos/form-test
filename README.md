@@ -1,5 +1,9 @@
 # FormTest
 
+Foi usado o pacote json-server (https://www.npmjs.com/package/json-server) para simular o backend e fazer as requisições http podendo adicionar um novo contato e listar os contatos adicionados. 
+
+Basta rodar o comando `json-server --watch db.json` para subir o servidor usando o arquivo db.json criado na raíz do projeto.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
 ## Development server

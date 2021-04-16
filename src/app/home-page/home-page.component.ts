@@ -1,4 +1,3 @@
-import { Contact } from '../core/http/contact.interface';
 import { HttpService } from './../core/http/http.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -30,14 +29,7 @@ export class HomePageComponent implements OnInit {
 
   onSubmit() {
     if(this.form.valid) {
-      const contact: Contact = {
-        id: null,
-        firstName: this.form.value.firstName,
-        lastName: this.form.value.lastName,
-        country: this.form.value.country,
-        subject: this.form.value.subject,
-      }
-      this.httpService.submitContact(contact).subscribe(
+      this.httpService.submitContact(this.form.value).subscribe(
         success => this.router.navigate(['/submit']),
         error => console.log(error),
         //() => console.log('request completo')

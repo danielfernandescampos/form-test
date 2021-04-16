@@ -39,4 +39,8 @@ export class SubmitPageComponent implements OnInit {
     }
   }
 
+  onClick(e) {
+    console.log(e)
+  }
+
 }

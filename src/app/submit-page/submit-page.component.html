@@ -10,11 +10,14 @@
   <tr class="header">
     <th style="width:30%;">Nome</th>
     <th style="width:20%;">País</th>
-    <th style="width:50%;">Sobre</th>
+    <th colspan="2" style="width:50%;">Sobre</th>
   </tr>
-  <tr *ngFor="let contact of contacts" (click)="onClick(contact)">
+  <tr *ngFor="let contact of contacts">
     <td>{{ contact.firstName }} {{ contact.lastName }}</td>
     <td>{{ contact.country }}</td>
     <td>{{ contact.subject }}</td>
+    <td class="table__close-btn" (click)="onDelete(contact)">&#10006;</td>
   </tr>
 </table>
+
+<ng-template #modal></ng-template>

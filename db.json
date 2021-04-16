@@ -15,27 +15,6 @@
       "subject": "Vanessinha do japão"
     },
     {
-      "id": 4,
-      "firstName": "Nancy",
-      "lastName": "Fernandes",
-      "country": "Brasil",
-      "subject": "Moradora de Cordeiro"
-    },
-    {
-      "id": 5,
-      "firstName": "Marinoca",
-      "lastName": "no Camelo",
-      "country": "Marrocos",
-      "subject": "hihihihih"
-    },
-    {
-      "id": 6,
-      "firstName": "José",
-      "lastName": "Almeida",
-      "country": "Argentina",
-      "subject": "José almeida azulzinho"
-    },
-    {
       "id": 7,
       "firstName": "Rogério",
       "lastName": "Águas",
@@ -48,13 +27,6 @@
       "lastName": "Seu",
       "country": "Brasil",
       "subject": "Um músico da quebrada"
-    },
-    {
-      "firstName": "Chiquinho",
-      "lastName": "Campos",
-      "country": "le street",
-      "subject": "Um cão fedorento",
-      "id": 9
     }
   ]
 }

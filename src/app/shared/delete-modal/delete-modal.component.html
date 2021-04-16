@@ -1,0 +1,29 @@
+<div id="id01" class="modal">
+  <span 
+    (click)="onCancel()" 
+    class="close" 
+    title="Close Modal">
+    ×</span>
+
+  <form class="modal-content">
+    <div class="container">
+      <h1 class="modal__title">Deletar contato</h1>
+      <p class="modal__text">Tem certeza que deseja deletar {{ contact.firstName }} {{ contact.lastName }}?</p>
+    
+      <div class="clearfix">
+        <button 
+            type="button" 
+            (click)="onCancel()" 
+            class="cancelbtn">
+            Cancelar
+        </button>
+        <button 
+            type="button" 
+            (click)="onDelete()" 
+            class="deletebtn">
+            Deletar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

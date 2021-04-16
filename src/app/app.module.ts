@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { DeleteModalComponent } from './shared/delete-modal/delete-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HomePageComponent,
     SubmitPageComponent,
     NavBarComponent,
+    DeleteModalComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DeleteModalComponent]
 })
 export class AppModule { }

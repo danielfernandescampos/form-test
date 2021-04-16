@@ -34,3 +34,13 @@
   #myTable tr.header, #myTable tr:hover {
     background-color: #f1f1f1;
   }
+
+  .table__close-btn {
+    color: grey;
+    cursor: pointer;
+
+    &:hover {
+      color: #f44336;
+      font-weight: bold;
+    }
+  }

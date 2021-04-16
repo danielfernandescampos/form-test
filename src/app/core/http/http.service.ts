@@ -20,4 +20,7 @@ export class HttpService {
     return this.http.post(this.API, contact).pipe(take(1))
   }
 
+  deleteContact(id) {
+    return this.http.delete(`${this.API}/${id}`).pipe(take(1))
+  }
 }

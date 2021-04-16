@@ -1,14 +1,13 @@
-<h3>Contact Form</h3>
-
 <div class="form" >
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="form__field">
-        <label for="fname">First Name</label>
+        <label for="fname">Nome</label>
         <input 
+            class="form__input"
             type="text" 
             id="fname" 
             name="firstname" 
-            placeholder="Your name.."
+            placeholder="Seu primeiro nome.."
             formControlName="firstName"
             >
         <div class="error-msg" *ngIf="!form.get('firstName').valid && form.get('firstName').touched" >
@@ -17,12 +16,13 @@
     </div>
 
     <div class="form__field">
-        <label for="lname">Last Name</label>
+        <label for="lname">Sobrenome</label>
         <input 
+            class="form__input"
             type="text" 
             id="lname" 
             name="lastname" 
-            placeholder="Your last name.."
+            placeholder="Seu sobrenome.."
             formControlName="lastName"
             >
         <div class="error-msg" *ngIf="!form.get('lastName').valid && form.get('lastName').touched" >
@@ -31,12 +31,13 @@
     </div>
 
     <div class="form__field">
-        <label for="country">Country</label>
+        <label for="country">País</label>
         <input 
+            class="form__input"
             type="text" 
             id="country" 
             name="country" 
-            placeholder="Your country.."
+            placeholder="Seu país.."
             formControlName="country"
             >
         <div class="error-msg" *ngIf="!form.get('country').valid && form.get('country').touched" >
@@ -45,21 +46,21 @@
     </div>
 
     <div class="form__field">
-        <label for="subject">Subject</label>
+        <label for="subject">Sobre</label>
         <textarea 
+            class="form__input"
             id="subject" 
             name="subject" 
-            placeholder="Write something.." 
+            placeholder="Fale um pouco sobre você.." 
             style="height:200px"
             formControlName="subject"
             >
         </textarea>
     <div class="error-msg" *ngIf="!form.get('subject').valid && form.get('subject').touched" >
-        Por favor, informe o assunto.
+        Esse campo deve ser preenchido.
     </div>
     </div>
 
-    <input type="submit" value="Submit">
-    <!--routerLink="/submit"-->
+    <input class="form__button" type="submit" value="Enviar">
   </form>
 </div>

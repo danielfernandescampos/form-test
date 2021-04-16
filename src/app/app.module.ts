@@ -9,12 +9,14 @@ import { SubmitPageComponent } from './submit-page/submit-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     SubmitPageComponent,
+    NavBarComponent,
   ],
   imports: [
     CommonModule,

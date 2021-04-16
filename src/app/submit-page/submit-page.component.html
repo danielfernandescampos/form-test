@@ -1,5 +1,3 @@
-<h2>My Customers</h2>
-
 <input 
     type="text" 
     id="myInput" 
@@ -10,9 +8,9 @@
 
 <table id="myTable">
   <tr class="header">
-    <th style="width:30%;">Name</th>
-    <th style="width:20%;">Country</th>
-    <th style="width:50%;">Subject</th>
+    <th style="width:30%;">Nome</th>
+    <th style="width:20%;">País</th>
+    <th style="width:50%;">Sobre</th>
   </tr>
   <tr *ngFor="let contact of contacts" >
     <td>{{ contact.firstName }} {{ contact.lastName }}</td>

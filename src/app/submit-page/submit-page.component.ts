@@ -1,4 +1,4 @@
-import { Contact } from './../core/http/contact';
+import { Contact } from '../core/http/contact.interface';
 import { HttpService } from './../core/http/http.service';
 import { Component, OnInit } from '@angular/core';
 
